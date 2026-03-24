@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia — Mitologia Grega</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <section class="screen" id="pageLogin">
+      <img src="./imagens/logo.svg" alt="logo" />
+      <h1>Trivia</h1>
+      <h2>Mitologia Grega</h2>
+      <button class="btn" onclick="goToWelcome()">Entrar</button>
+    </section>
+
+    <section class="screen" id="pageWelcome">
+      <img src="./imagens/logo.svg" alt="logo" />
+      <p class="welcome">Seja bem-vindo ao Trivia sobre mitologia grega <span id="welcome-name">Nome do jogador</span>, está
+        preparado?
+      </p>
+      <button class="btn" onclick="startQuiz()">Começar</button>
+    </section>
+
+    <section class="screen" id="pageQuiz">
+        <div class="topbar">
+            <div class="tb-item"><span id="q-counter">1/10</span></div>
+            <div class="tb-item">
+                <span style="font-size:1.2rem">⏰</span>
+                <span class="timer-val" id="timer-val">00:15</span>
+            </div>
+            <div class="tb-item"><span id="lives-disp">3 ❤️</span></div>
+        </div>
+        <div class="quiz-body">
+            <div class="question-box"><p id="q-text">...</p></div>
+            <div class="options-list" id="opts"></div>
+            <div class="next-wrap" id="next-wrap" style="display:none">
+                <button class="btn" id="next-btn" onclick="nextQuestion()">Próxima →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="screen" id="pageResult">
+        <div id="medusa-result"></div>
+        <div class="res-title" id="res-title">Parabéns!</div>
+        <div class="res-sub"   id="res-sub">Você ganhou!</div>
+        <div class="res-label">Você acertou:</div>
+        <div class="res-score" id="res-score">0/10</div>
+        <div class="res-hearts" id="res-hearts"></div>
+        <button class="btn" onclick="resetQuiz()" style="margin-bottom:12px">Jogar novamente</button>
+        <button class="btn btn-ghost" onclick="goToLogin()">Trocar jogador</button>
+    </div>
+    
+    </section>
+  </body>
+</html>

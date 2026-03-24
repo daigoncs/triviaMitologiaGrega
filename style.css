@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1e7;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: 100%;
+  background-color: #718c55;
+  color: #f1f1e7;
+  padding: 18px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+#pageLogin {
+  justify-content: center;
+  padding: 48px 36px 56px;
+  text-align: center;
+  gap: 0;
+}
+
+#pageLogin h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #718c55;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+#pageWelcome {
+  justify-content: center;
+  padding: 48px 36px 56px;
+  text-align: center;
+  gap: 0;
+}
+
+#pageQuiz {
+  justify-content: center;
+  padding: 48px 36px 56px;
+  text-align: center;
+  gap: 0;
+}
+
+#pageResult {
+  justify-content: center;
+  padding: 48px 36px 56px;
+  text-align: center;
+  gap: 0;
+}
