@@ -131,3 +131,34 @@ function nextQuestion() {
 
 answered = false;
 document.getElementById("next-wrap").style.display = "none";
+
+function showResult() {
+  document.getElementById("pageQuiz").style.display = "none";
+  document.getElementById("pageResult").style.display = "block";
+
+  document.getElementById("res-score").textContent =
+    pontuacao + "/" + questions.length;
+
+  let mensagem = "";
+
+  if (pontuacao <= 3) {
+    mensagem = "Você precisa estudar mais.";
+  } else if (pontuacao <= 7) {
+    mensagem = "Bom desempenho!";
+  } else {
+    mensagem = "Parabéns ! Você domina a mitologia grega";
+  }
+
+  document.getElementById("res-sub").textContent = mensagem;
+}
+
+function resetQuiz() {
+  questionAtual = 0;
+  pontuacao = 0;
+  answered = false;
+
+  document.getElementById("pageResult").style.display = "none";
+  document.getElementById("pageQuiz").style.display = "block";
+
+  showQuestion();
+}
