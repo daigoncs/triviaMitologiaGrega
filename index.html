@@ -24,7 +24,7 @@
       <p class="welcome">Seja bem-vindo ao Trivia sobre mitologia grega <span id="welcome-name">Nome do jogador</span>, está
         preparado?
       </p>
-      <button class="btn" onclick="startQuiz()">Começar</button>
+      <button class="btn" onclick="showQuestion()">Começar</button>
     </section>
 
     <section class="screen" id="pageQuiz">
@@ -37,7 +37,7 @@
             <div class="tb-item"><span id="lives-disp">3 ❤️</span></div>
         </div>
         <div class="quiz-body">
-            <div class="question-box"><p id="q-text">...</p></div>
+            <div class="question-box"><p id="questionText">...</p></div>
             <div class="options-list" id="opts"></div>
             <div class="next-wrap" id="next-wrap" style="display:none">
                 <button class="btn" id="next-btn" onclick="nextQuestion()">Próxima →</button>
@@ -57,5 +57,8 @@
     </div>
     
     </section>
+
+    <script src="script.js"></script>
+
   </body>
 </html>

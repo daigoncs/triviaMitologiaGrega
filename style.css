@@ -60,3 +60,13 @@ body {
   text-align: center;
   gap: 0;
 }
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+}
