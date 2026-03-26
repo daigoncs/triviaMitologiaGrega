@@ -72,6 +72,10 @@ function showQuestion() {
 
   questionText.textContent = question.text;
 
+  //contador de questão
+  const counter = document.getElementById("q-counter");
+  counter.textContent = `${questionAtual + 1}/${questions.length}`;
+
   opts.innerHTML = "";
 
   question.options.forEach((option, index) => {
@@ -79,7 +83,6 @@ function showQuestion() {
     button.textContent = option;
     button.classList.add("option");
 
-    // 👇 ISSO FALTAVA
     button.onclick = () => selectAnswer(button, index);
 
     opts.appendChild(button);
@@ -97,9 +100,9 @@ function selectAnswer(button, index) {
   // percorre todos os botões
   for (let i = 0; i < buttons.length; i++) {
     if (i === correctIndex) {
-      buttons[i].classList.add("correct"); // verde
+      buttons[i].classList.add("correct");
     } else if (i === index) {
-      buttons[i].classList.add("wrong"); // vermelho
+      buttons[i].classList.add("wrong");
     }
 
     buttons[i].disabled = true;
@@ -125,3 +128,6 @@ function nextQuestion() {
     showResult();
   }
 }
+
+answered = false;
+document.getElementById("next-wrap").style.display = "none";
