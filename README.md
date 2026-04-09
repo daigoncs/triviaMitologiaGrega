@@ -1,6 +1,8 @@
 # 🏛️ Trivia — Mitologia Grega
  
 Quiz interativo sobre mitologia grega com navegação por hash, timer por questão e sistema de vidas.
+
+![Badge Refatorando](http://img.shields.io/static/v1?label=STATUS&message=CONSTRUINDO...&color=GREEN&style=for-the-badge)
  
 ---
  
